@@ -8,6 +8,10 @@ while (loop === true) {
 
 	var option = prompt("Would you like to do (a)ddition, (s)ubtraction, (m)ultiplication or (d)ivision?");
 
+	while (option != 'a' && option != 's' && option != 'm' && option != 'd' && option != '') {
+		option = prompt("Would you like to do (a)ddition, (s)ubtraction, (m)ultiplication or (d)ivision?");
+	}
+
 	var num1 = prompt("Enter the first value:");
 
 	var num2 = prompt("Enter the second value");
@@ -28,10 +32,10 @@ while (loop === true) {
 		case 'a': choice = prompt("The answer is " + (parseInt(num1) + parseInt(num2)) + ". Press enter to make another calculation or enter q to quit.");
 		break;
 
-		default: choiceloop = false;
+		//default: choiceloop = false;
 	}
 
-	while(choiceloop === 'true') {
+	while(choiceloop === true) {
 
 		if (choice === '') {
 			choiceloop = false;
@@ -40,8 +44,8 @@ while (loop === true) {
 			choiceloop = false;
 			loop = false;
 		} else {
-			choice = prompt("Press enter to make another calculation or enter q to quit.");
 			choiceloop = true;
+			choice = prompt("Press enter to make another calculation or enter q to quit.");	
 		}
 	}
 
