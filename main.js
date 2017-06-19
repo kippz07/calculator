@@ -1,6 +1,6 @@
 var loop = true;
 
-while (loop === true) {
+while (loop) {
 
 	var choice = '';
 	
@@ -31,11 +31,9 @@ while (loop === true) {
 
 		case 'a': choice = prompt("The answer is " + (parseInt(num1) + parseInt(num2)) + ". Press enter to make another calculation or enter q to quit.");
 		break;
-
-		//default: choiceloop = false;
 	}
 
-	while(choiceloop === true) {
+	while(choiceloop) {
 
 		if (choice === '') {
 			choiceloop = false;
